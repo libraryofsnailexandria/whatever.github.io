@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library of Snailexandria</title>
+        <link rel="stylesheet" type="text/css" href="style.css?v=10">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+</head>
+<body>
+    <div id="home-animation">
+        <div id="home-popup">
+            <div>
+                <h3>Welcome to...</h3>
+                <h1>The Library of Snailexandria</h1>
+                <p>Home of the best guides out there</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var animationElements = ['#home-animation', '#home-popup'];
+        var animationEndCount = 0;
+    
+        animationElements.forEach(function(selector) {
+            document.querySelector(selector).addEventListener('animationend', function() {
+                animationEndCount++;
+                if (animationEndCount === animationElements.length) {
+                    window.location.href = 'home.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
